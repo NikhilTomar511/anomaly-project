@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://7vent0oby6q0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hjh4"]
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_2kv0j"]
+material = SubResource("StandardMaterial3D_7hjh4")
+size = Vector3(1.2, 0.05, 3.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op3s4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nlwj8"]
+material = SubResource("StandardMaterial3D_op3s4")
+size = Vector3(1, 0.05, 3.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfbtk"]
+albedo_color = Color(0.751832, 0.446408, 7.70092e-07, 1)
+emission_enabled = true
+emission = Color(0.996617, 0.819372, 0.713319, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gv7jh"]
+material = SubResource("StandardMaterial3D_xfbtk")
+size = Vector3(1, 0.01, 3.6)
+
+[node name="Light" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5739, 4.97375, 6.2944)
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
+cast_shadow = 0
+mesh = SubResource("BoxMesh_2kv0j")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGMesh3D2"]
+cast_shadow = 0
+operation = 2
+mesh = SubResource("BoxMesh_nlwj8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+cast_shadow = 0
+mesh = SubResource("BoxMesh_gv7jh")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.73807, 0.537792, 0.111625, 1)
+light_specular = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 20.0
+omni_attenuation = 2.0

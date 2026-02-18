@@ -1,0 +1,39 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://oddi7r74tnf5"
+path.s3tc="res://.godot/imported/office_chair_2.png-792fe4feb050c48b4890d4ed7c23d69d.s3tc.ctex"
+path.etc2="res://.godot/imported/office_chair_2.png-792fe4feb050c48b4890d4ed7c23d69d.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "b814ac75431209db6babbaeae2196e38"
+}
+
+[deps]
+
+source_file="res://Resource_BossOffice/Chair/office_chair_2.png"
+dest_files=["res://.godot/imported/office_chair_2.png-792fe4feb050c48b4890d4ed7c23d69d.s3tc.ctex", "res://.godot/imported/office_chair_2.png-792fe4feb050c48b4890d4ed7c23d69d.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://Resource_BossOffice/Chair/office_chair_2.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

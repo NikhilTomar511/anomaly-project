@@ -1,0 +1,316 @@
+[gd_scene load_steps=23 format=3 uid="uid://bkoa8t01ejytl"]
+
+[ext_resource type="Texture2D" uid="uid://c5mb6pbm65vcq" path="res://Bsodwindows10.png" id="1_oyfgi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74fma"]
+albedo_color = Color(0.0846899, 0.0846899, 0.0846899, 1)
+roughness = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_s6boj"]
+lightmap_size_hint = Vector2i(129, 89)
+material = SubResource("StandardMaterial3D_74fma")
+add_uv2 = true
+size = Vector3(16, 0.3, 9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ap4xe"]
+albedo_color = Color(0.314316, 0.314316, 0.314316, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wde3h"]
+material = SubResource("StandardMaterial3D_ap4xe")
+size = Vector3(15, 0.4, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7a51"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n4wqy"]
+material = SubResource("StandardMaterial3D_o7a51")
+size = Vector3(15, 0.8, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glcsh"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3jyd1"]
+material = SubResource("StandardMaterial3D_glcsh")
+size = Vector3(0.05, 0.45, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xekc"]
+material = SubResource("StandardMaterial3D_glcsh")
+size = Vector3(0.05, 0.45, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vtf6p"]
+material = SubResource("StandardMaterial3D_glcsh")
+size = Vector3(0.05, 0.45, 1.6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_it2id"]
+material = SubResource("StandardMaterial3D_glcsh")
+size = Vector3(0.05, 0.45, 0.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hg7sh"]
+material = SubResource("StandardMaterial3D_glcsh")
+size = Vector3(0.05, 0.45, 0.89)
+
+[sub_resource type="BoxMesh" id="BoxMesh_maj6n"]
+material = SubResource("StandardMaterial3D_glcsh")
+size = Vector3(0.05, 0.45, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6swb"]
+albedo_color = Color(0.412152, 0.412152, 0.412152, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o886b"]
+material = SubResource("StandardMaterial3D_a6swb")
+size = Vector3(5, 0.1, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lsywr"]
+albedo_color = Color(0.194349, 0.194349, 0.194349, 1)
+roughness = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_p2cak"]
+material = SubResource("StandardMaterial3D_lsywr")
+size = Vector3(16, 0.2, 9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fa1qe"]
+albedo_texture = ExtResource("1_oyfgi")
+roughness = 0.5
+emission_enabled = true
+emission = Color(0.0562916, 0.0562916, 0.0562916, 1)
+emission_texture = ExtResource("1_oyfgi")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_426tt"]
+material = SubResource("StandardMaterial3D_fa1qe")
+size = Vector2(15, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tgs2"]
+albedo_color = Color(0.396891, 0.670822, 0.99694, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_ddmsr"]
+material = SubResource("StandardMaterial3D_6tgs2")
+size = Vector3(1, 1, 0.01)
+
+[node name="Laptop" type="Node3D"]
+
+[node name="LaptopBaseMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_s6boj")
+
+[node name="KeyboardMesh" type="MeshInstance3D" parent="LaptopBaseMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0616136, -0.826329)
+mesh = SubResource("BoxMesh_wde3h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104674, -0.186481, -1.73562)
+mesh = SubResource("BoxMesh_n4wqy")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104674, -0.186481, -0.929536)
+mesh = SubResource("BoxMesh_n4wqy")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104674, -0.186481, -0.0491861)
+mesh = SubResource("BoxMesh_n4wqy")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104674, -0.186481, 0.874007)
+mesh = SubResource("BoxMesh_n4wqy")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104674, -0.186481, 1.72379)
+mesh = SubResource("BoxMesh_n4wqy")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6054, 0, 0)
+mesh = SubResource("BoxMesh_3jyd1")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61768, 0, 0)
+mesh = SubResource("BoxMesh_3jyd1")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54795, 0, 0)
+mesh = SubResource("BoxMesh_0xekc")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.51593, 0, -1.70785)
+mesh = SubResource("BoxMesh_vtf6p")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.53289, 0, -1.35406)
+mesh = SubResource("BoxMesh_it2id")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52108, 0, -1.35406)
+mesh = SubResource("BoxMesh_it2id")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55782, 0, -1.35406)
+mesh = SubResource("BoxMesh_it2id")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51027, 0, -1.35406)
+mesh = SubResource("BoxMesh_it2id")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39526, 0, -1.35406)
+mesh = SubResource("BoxMesh_it2id")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34628, 0, -1.35406)
+mesh = SubResource("BoxMesh_it2id")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.786852, 0, -1.35406)
+mesh = SubResource("BoxMesh_it2id")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97085, 0, -1.35406)
+mesh = SubResource("BoxMesh_it2id")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.20819, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11044, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1052, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.046, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96525, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.903846, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15484, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16059, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33345, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.49286, 0, -0.489061)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.82279, 0, 0.402773)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74101, 0, 0.402773)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.64519, 0, 0.402773)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62552, 0, 0.402773)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45177, 0, 0.402773)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D37" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.428104, 0, 0.402773)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.568648, 0, 0.402773)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D39" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68258, 0, 0.402773)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D40" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79668, 0, 0.402773)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.47319, 0, 1.30583)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D41" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32372, 0, 1.30583)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D42" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22632, 0, 1.30583)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D43" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11851, 0, 1.30583)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D44" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04122, 0, 1.30583)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D45" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0429616, 0, 1.30583)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D46" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.998619, 0, 1.30583)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D47" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17323, 0, 1.30583)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D48" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.31922, 0, 1.30583)
+mesh = SubResource("BoxMesh_hg7sh")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3903, 0, 2.09729)
+mesh = SubResource("BoxMesh_maj6n")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.19079, 0, 2.09729)
+mesh = SubResource("BoxMesh_maj6n")
+
+[node name="MeshInstance3D49" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00006, 0, 2.09729)
+mesh = SubResource("BoxMesh_maj6n")
+
+[node name="MeshInstance3D50" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.60549, 0, 2.09729)
+mesh = SubResource("BoxMesh_maj6n")
+
+[node name="MeshInstance3D51" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63612, 0, 2.09729)
+mesh = SubResource("BoxMesh_maj6n")
+
+[node name="MeshInstance3D52" type="MeshInstance3D" parent="LaptopBaseMesh/KeyboardMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58999, 0, 2.09729)
+mesh = SubResource("BoxMesh_maj6n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LaptopBaseMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.77245e-05, 0.17188, 3.10372)
+mesh = SubResource("BoxMesh_o886b")
+
+[node name="LaptopScreenMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.34202, -0.939693, 0, 0.939693, 0.34202, 0, 4.23708, -5.83161)
+mesh = SubResource("BoxMesh_p2cak")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LaptopScreenMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.105723, -0.133002)
+mesh = SubResource("PlaneMesh_426tt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="LaptopScreenMesh"]
+transform = Transform3D(1, 0, 0, 0, -2.98023e-08, -1, 0, 1, -2.98023e-08, 0, -0.108827, -0.0396128)
+mesh = SubResource("PrismMesh_ddmsr")

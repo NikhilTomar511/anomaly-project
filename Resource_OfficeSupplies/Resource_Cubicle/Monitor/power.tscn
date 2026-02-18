@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://gw8qmlvwynkx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrr21"]
+albedo_color = Color(4.62055e-06, 0.587689, 0.776092, 1)
+emission_enabled = true
+emission = Color(6.44952e-06, 0.569984, 0.782186, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ytkts"]
+albedo_color = Color(0.0596431, 0.674153, 0.886147, 1)
+emission_enabled = true
+emission = Color(0.0704958, 0.60846, 0.798278, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_168pu"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mfy11"]
+albedo_color = Color(7.70092e-06, 0.770058, 0.945795, 1)
+emission_enabled = true
+emission = Color(0.252542, 0.588874, 0.761196, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wjfv1"]
+material = SubResource("StandardMaterial3D_mfy11")
+radius = 0.05
+height = 0.5
+
+[node name="Power" type="Node3D"]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+height = 0.187
+sides = 32
+material = SubResource("StandardMaterial3D_qrr21")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCylinder3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610995, 1.19209e-07, -0.000761151)
+operation = 2
+radius = 0.395
+height = 0.214
+sides = 32
+material = SubResource("StandardMaterial3D_ytkts")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGCylinder3D"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -0.407884, 0.0241501, 0)
+operation = 2
+mesh = SubResource("BoxMesh_168pu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.205499, 0, 0)
+mesh = SubResource("CapsuleMesh_wjfv1")

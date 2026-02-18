@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2hfr375ybfuf"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_rk3pt"]
+[ext_resource type="Texture2D" uid="uid://cm8ovh3n4ohu5" path="res://Untitled (11).png" id="2_8dstj"]
+[ext_resource type="FontFile" uid="uid://bjglnj8foa4my" path="res://BebasNeue-Regular.ttf" id="3_6vlpk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_56n0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rucp1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cb8d4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxfei"]
+
+[node name="Main_Menu" type="Node2D"]
+
+[node name="Main Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_rk3pt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Main Menu"]
+position = Vector2(960, 540)
+texture = ExtResource("2_8dstj")
+
+[node name="Start" type="Button" parent="Main Menu"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 688.0
+offset_right = 344.0
+offset_bottom = 784.0
+theme_override_colors/font_color = Color(0.347817, 0.347817, 0.347817, 1)
+theme_override_fonts/font = ExtResource("3_6vlpk")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_56n0u")
+text = "Start"
+
+[node name="Settings" type="Button" parent="Main Menu"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 800.0
+offset_right = 368.0
+offset_bottom = 928.0
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("3_6vlpk")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rucp1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cb8d4")
+text = "Settings
+"
+
+[node name="Exit" type="Button" parent="Main Menu"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 936.0
+offset_right = 360.0
+offset_bottom = 1032.0
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("3_6vlpk")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hxfei")
+text = "Exit"
+
+[connection signal="pressed" from="Main Menu/Start" to="Main Menu" method="_on_start_pressed"]
+[connection signal="pressed" from="Main Menu/Settings" to="Main Menu" method="_on_settings_pressed"]
+[connection signal="pressed" from="Main Menu/Exit" to="Main Menu" method="_on_exit_pressed"]

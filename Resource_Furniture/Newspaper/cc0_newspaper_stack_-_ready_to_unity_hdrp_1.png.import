@@ -1,0 +1,39 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b0iawefli3d2c"
+path.s3tc="res://.godot/imported/cc0_newspaper_stack_-_ready_to_unity_hdrp_1.png-4097c0a41e6fff3fe886a162d022511c.s3tc.ctex"
+path.etc2="res://.godot/imported/cc0_newspaper_stack_-_ready_to_unity_hdrp_1.png-4097c0a41e6fff3fe886a162d022511c.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "a7160af98b6b86d5068758269c815b22"
+}
+
+[deps]
+
+source_file="res://Resource_Furniture/Newspaper/cc0_newspaper_stack_-_ready_to_unity_hdrp_1.png"
+dest_files=["res://.godot/imported/cc0_newspaper_stack_-_ready_to_unity_hdrp_1.png-4097c0a41e6fff3fe886a162d022511c.s3tc.ctex", "res://.godot/imported/cc0_newspaper_stack_-_ready_to_unity_hdrp_1.png-4097c0a41e6fff3fe886a162d022511c.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://Resource_Furniture/Newspaper/cc0_newspaper_stack_-_ready_to_unity_hdrp_2.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

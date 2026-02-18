@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6js40st36xf"]
+
+[ext_resource type="PackedScene" uid="uid://ckv8w0vyhdnn8" path="res://Resource_Elevator/elevator_with_animation_lowpoly.glb" id="1_m33q7"]
+[ext_resource type="Script" path="res://Scripts/elevator.gd" id="1_p7ghe"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y7ehs"]
+data = PackedVector3Array(-0.7101, -0.0681, -1.3996, -0.7101, 0.0681, 1.3996, -0.7101, -0.0681, 1.3996, -0.7101, -0.0681, -1.3996, -0.7101, 0.0681, -1.3996, -0.7101, 0.0681, 1.3996, 0.2276, -0.0681, -1.3996, -0.7101, -0.0681, 1.3996, 0.2276, -0.0681, 1.3996, 0.2276, -0.0681, -1.3996, -0.7101, -0.0681, -1.3996, -0.7101, -0.0681, 1.3996, 0.2276, 0.0681, 1.3996, -0.7101, -0.0681, 1.3996, -0.7101, 0.0681, 1.3996, 0.2276, 0.0681, 1.3996, 0.2276, -0.0681, 1.3996, -0.7101, -0.0681, 1.3996, -0.7101, 0.0681, -1.3996, 0.2276, 0.0681, 1.3996, -0.7101, 0.0681, 1.3996, -0.7101, 0.0681, -1.3996, 0.2276, 0.0681, -1.3996, 0.2276, 0.0681, 1.3996, 0.2389, 0.0634, 1.3949, 0.2276, 0.0681, -1.3996, 0.2389, 0.0634, -1.3949, 0.2389, 0.0634, 1.3949, 0.2276, 0.0681, 1.3996, 0.2276, 0.0681, -1.3996, 0.2276, -0.0681, -1.3996, 0.2389, 0.0634, -1.3949, 0.2276, 0.0681, -1.3996, 0.2276, -0.0681, -1.3996, 0.2389, -0.0634, -1.3949, 0.2389, 0.0634, -1.3949, 0.2276, 0.0681, 1.3996, 0.2389, -0.0634, 1.3949, 0.2276, -0.0681, 1.3996, 0.2276, 0.0681, 1.3996, 0.2389, 0.0634, 1.3949, 0.2389, -0.0634, 1.3949, 0.2276, -0.0681, 1.3996, 0.2389, -0.0634, -1.3949, 0.2276, -0.0681, -1.3996, 0.2276, -0.0681, 1.3996, 0.2389, -0.0634, 1.3949, 0.2389, -0.0634, -1.3949, -0.7101, 0.0681, -1.3996, 0.2276, -0.0681, -1.3996, 0.2276, 0.0681, -1.3996, -0.7101, 0.0681, -1.3996, -0.7101, -0.0681, -1.3996, 0.2276, -0.0681, -1.3996)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_58g4u"]
+data = PackedVector3Array(-0.713, -0.0867, -1.3996, -0.713, 0.0867, 1.3996, -0.713, -0.0867, 1.3996, -0.713, -0.0867, -1.3996, -0.713, 0.0867, -1.3996, -0.713, 0.0867, 1.3996, 0.221, -0.0867, -1.3996, -0.713, -0.0867, 1.3996, 0.221, -0.0867, 1.3996, 0.221, -0.0867, -1.3996, -0.713, -0.0867, -1.3996, -0.713, -0.0867, 1.3996, 0.221, 0.0867, 1.3996, -0.713, -0.0867, 1.3996, -0.713, 0.0867, 1.3996, 0.221, 0.0867, 1.3996, 0.221, -0.0867, 1.3996, -0.713, -0.0867, 1.3996, -0.713, 0.0867, -1.3996, 0.221, 0.0867, 1.3996, -0.713, 0.0867, 1.3996, -0.713, 0.0867, -1.3996, 0.221, 0.0867, -1.3996, 0.221, 0.0867, 1.3996, 0.2417, 0.0846, 1.3975, 0.221, 0.0867, -1.3996, 0.2417, 0.0846, -1.3976, 0.2417, 0.0846, 1.3975, 0.221, 0.0867, 1.3996, 0.221, 0.0867, -1.3996, 0.221, -0.0867, -1.3996, 0.2417, 0.0846, -1.3976, 0.221, 0.0867, -1.3996, 0.221, -0.0867, -1.3996, 0.2417, -0.0846, -1.3976, 0.2417, 0.0846, -1.3976, 0.221, 0.0867, 1.3996, 0.2417, -0.0846, 1.3975, 0.221, -0.0867, 1.3996, 0.221, 0.0867, 1.3996, 0.2417, 0.0846, 1.3975, 0.2417, -0.0846, 1.3975, 0.221, -0.0867, 1.3996, 0.2417, -0.0846, -1.3976, 0.221, -0.0867, -1.3996, 0.221, -0.0867, 1.3996, 0.2417, -0.0846, 1.3975, 0.2417, -0.0846, -1.3976, -0.713, 0.0867, -1.3996, 0.221, -0.0867, -1.3996, 0.221, 0.0867, -1.3996, -0.713, 0.0867, -1.3996, -0.713, -0.0867, -1.3996, 0.221, -0.0867, -1.3996)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kiuu1"]
+size = Vector3(0.1, 3.1, 2.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gvl5l"]
+size = Vector3(3.9, 3.1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0abgj"]
+size = Vector3(2, 3.1, 0.3)
+
+[node name="Elevator" type="Node3D"]
+script = ExtResource("1_p7ghe")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+
+[node name="Sketchfab_Scene" parent="AnimatableBody3D" instance=ExtResource("1_m33q7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.488387, -1.19209e-07, -0.326406)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="AnimatableBody3D/Sketchfab_Scene/Sketchfab_model/3cddd62893144e18ab3bf2f9f4529fcf_fbx/Object_2/RootNode/Door2/Door2_ElevatorMetal_0" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D/Sketchfab_Scene/Sketchfab_model/3cddd62893144e18ab3bf2f9f4529fcf_fbx/Object_2/RootNode/Door2/Door2_ElevatorMetal_0/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_y7ehs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="AnimatableBody3D/Sketchfab_Scene/Sketchfab_model/3cddd62893144e18ab3bf2f9f4529fcf_fbx/Object_2/RootNode/Door1/Door1_ElevatorMetal_0" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D/Sketchfab_Scene/Sketchfab_model/3cddd62893144e18ab3bf2f9f4529fcf_fbx/Object_2/RootNode/Door1/Door1_ElevatorMetal_0/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_58g4u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.39748, 1.5296, -0.537186)
+shape = SubResource("BoxShape3D_kiuu1")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60736, 1.5296, -0.537186)
+shape = SubResource("BoxShape3D_kiuu1")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.414495, 1.52226, -1.65523)
+shape = SubResource("BoxShape3D_gvl5l")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48772, 1.51971, 0.705705)
+shape = SubResource("BoxShape3D_0abgj")
+
+[editable path="AnimatableBody3D/Sketchfab_Scene"]
