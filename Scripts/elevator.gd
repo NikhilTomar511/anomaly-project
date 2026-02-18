@@ -9,7 +9,7 @@ func _ready() -> void:
 func _open_doors() -> void:
 	door_anim.play("Doors open")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	pass
 
