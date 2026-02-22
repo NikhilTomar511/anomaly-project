@@ -6,6 +6,10 @@ extends Node3D
 func _ready() -> void:
 	pass
 
+func _open_doors() -> void:
+	door_anim.play("Doors open")
+
+
 func _process(delta: float) -> void:
 	pass
 

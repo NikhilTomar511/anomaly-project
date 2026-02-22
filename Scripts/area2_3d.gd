@@ -1,7 +1,7 @@
 extends Area3D
 
 var is_open = false
-var interaction_distance = 4.0  
+var interaction_distance = 4.0 
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
 
