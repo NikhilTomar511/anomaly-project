@@ -20,6 +20,7 @@ config/icon="res://Icon/COA_USSR.png"
 [autoload]
 
 global="*res://Scripts/global.gd"
+AnomalyManager="*res://Scripts/anomaly_manager.gd"
 
 [display]
 
@@ -34,6 +35,7 @@ window/vsync/vsync_mode=0
 player=""
 refprobes=""
 3d_scene=""
+anomalies=""
 
 [input]
 

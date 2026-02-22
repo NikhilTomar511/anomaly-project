@@ -5,7 +5,7 @@ const CONFIG_PATH := "user://settings.cfg"
 
 
 func _ready() -> void:
-	pass
+	AnomalyManager.start_new_loop()
 
 
 func _process(delta: float) -> void:

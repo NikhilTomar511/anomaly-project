@@ -1,7 +1,7 @@
 extends Control
 
 
-#Buttons
+
 @onready var b_winm = $WinMode/WinModeBut
 @onready var b_vsyn = $Vsync/VsyncBut
 @onready var b_shdr = $"Shadow Resolution/ShadowResBut"
@@ -11,7 +11,7 @@ extends Control
 @onready var b_fsrm = $FSRmode/FSRModeBut
 @onready var b_fsrq = $FSRQuality/FSRQualityBut
 
-#ToolTips
+
 @onready var l_winm = $ColorRect5/WinModeTT
 @onready var l_vsyn = $ColorRect5/VSyncTT
 @onready var l_shdr = $ColorRect5/ShadowResTT

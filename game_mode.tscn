@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://udbo3k8m8c3i"]
+
+[ext_resource type="Script" path="res://Scripts/game_mode.gd" id="1_1u7a1"]
+[ext_resource type="Texture2D" uid="uid://i04444kv7tgd" path="res://Untitled (23).png" id="1_mw0ls"]
+[ext_resource type="Theme" uid="uid://fjag1o4efbxa" path="res://buttheme.tres" id="2_1q0r0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0fuc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wygkr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2jow"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yddef"]
+
+[node name="Game_Mode" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1u7a1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(960, 544)
+texture = ExtResource("1_mw0ls")
+
+[node name="Easy" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 135.0
+offset_top = 335.0
+offset_right = 400.0
+offset_bottom = 435.0
+theme = ExtResource("2_1q0r0")
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t0fuc")
+text = "EASY
+"
+alignment = 0
+
+[node name="Normal" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 435.0
+offset_right = 400.0
+offset_bottom = 535.0
+theme = ExtResource("2_1q0r0")
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wygkr")
+text = "NORMAL
+"
+alignment = 0
+
+[node name="Hard" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 535.0
+offset_right = 400.0
+offset_bottom = 635.0
+theme = ExtResource("2_1q0r0")
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2jow")
+text = "HARD"
+alignment = 0
+
+[node name="Insanity" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 635.0
+offset_right = 400.0
+offset_bottom = 735.0
+theme = ExtResource("2_1q0r0")
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yddef")
+text = "INSANITY"
+alignment = 0
+
+[connection signal="pressed" from="Control/Easy" to="Control" method="_on_easy_pressed"]
+[connection signal="pressed" from="Control/Normal" to="Control" method="_on_normal_pressed"]
+[connection signal="pressed" from="Control/Hard" to="Control" method="_on_hard_pressed"]
+[connection signal="pressed" from="Control/Insanity" to="Control" method="_on_insanity_pressed"]
