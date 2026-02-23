@@ -1,0 +1,111 @@
+[gd_scene load_steps=11 format=3 uid="uid://y4so00kmjp3f"]
+
+[ext_resource type="Script" path="res://Scripts/complete.gd" id="1_wujne"]
+[ext_resource type="FontFile" uid="uid://bjglnj8foa4my" path="res://BebasNeue-Regular.ttf" id="2_y6s0g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bfjc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nbi3c"]
+material = SubResource("StandardMaterial3D_4bfjc")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yd3ts"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bmos6"]
+bg_color = Color(0.511719, 0.511719, 0.511719, 1)
+
+[sub_resource type="Theme" id="Theme_df56w"]
+default_font = ExtResource("2_y6s0g")
+default_font_size = 24
+OptionButton/colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+OptionButton/colors/font_focus_color = Color(0.34902, 0.34902, 0.34902, 1)
+OptionButton/colors/font_hover_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+OptionButton/styles/focus = SubResource("StyleBoxEmpty_yd3ts")
+PopupMenu/colors/font_color = Color(1, 1, 1, 1)
+PopupMenu/colors/font_hover_color = Color(0, 0, 0, 1)
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_bmos6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o5ev6"]
+
+[sub_resource type="Theme" id="Theme_725ac"]
+default_font = ExtResource("2_y6s0g")
+default_font_size = 24
+OptionButton/colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+OptionButton/colors/font_focus_color = Color(0.34902, 0.34902, 0.34902, 1)
+OptionButton/colors/font_hover_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+OptionButton/styles/focus = SubResource("StyleBoxEmpty_yd3ts")
+PopupMenu/colors/font_color = Color(1, 1, 1, 1)
+PopupMenu/colors/font_hover_color = Color(0, 0, 0, 1)
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_bmos6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5imoo"]
+
+[node name="Complete" type="Node2D"]
+script = ExtResource("1_wujne")
+
+[node name="Background" type="MeshInstance2D" parent="."]
+position = Vector2(963.75, 547.75)
+scale = Vector2(1928.5, 1096.5)
+mesh = SubResource("BoxMesh_nbi3c")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 688.0
+offset_top = 150.0
+offset_right = 1268.0
+offset_bottom = 270.0
+theme = SubResource("Theme_df56w")
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o5ev6")
+text = "Congratulations!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 728.0
+offset_top = 300.0
+offset_right = 1192.0
+offset_bottom = 400.0
+theme = SubResource("Theme_725ac")
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5imoo")
+text = "You did it"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 512.0
+offset_top = 450.0
+offset_right = 1480.0
+offset_bottom = 550.0
+theme = SubResource("Theme_725ac")
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5imoo")
+text = "You escaped the corporate hellhole"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 472.0
+offset_top = 600.0
+offset_right = 1494.0
+offset_bottom = 700.0
+theme = SubResource("Theme_725ac")
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5imoo")
+text = "by escaping to"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 464.0
+offset_top = 750.0
+offset_right = 1486.0
+offset_bottom = 850.0
+theme = SubResource("Theme_725ac")
+theme_override_colors/font_color = Color(0.34902, 0.34902, 0.34902, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5imoo")
+text = "the roof and jumping off"
+horizontal_alignment = 1

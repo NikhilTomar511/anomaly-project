@@ -2,11 +2,23 @@ extends Node
 
 var game_mode: int = 0
 var is_armed: bool = false
-var current_floor : int = 0
+var current_floor : int = 10
 var anomaly_active : bool = false
 
 func check_choice(choice: int):
 	var correct = false
+	
+	if game_mode == 1 and current_floor == 10:
+		get_tree().change_scene_to_file("res://complete.tscn")
+	
+	if game_mode == 2 and current_floor == 20:
+		get_tree().change_scene_to_file("res://main_menu.tscn")
+	
+	if game_mode == 3 and current_floor == 50:
+		get_tree().change_scene_to_file("res://main_menu.tscn")
+	
+	if game_mode == 4 and current_floor == 999:
+		get_tree().change_scene_to_file("res://main_menu.tscn")
 	
 	if anomaly_active:
 		if choice == 2:
@@ -15,12 +27,15 @@ func check_choice(choice: int):
 		if choice == 1:
 			correct = true
 	
-	if correct:
+	if correct == true:
 		current_floor += 1
-		print("Correct Guess")
+	elif correct == false and game_mode == 1:
+		if current_floor == 0:
+			current_floor = 0
+		else:
+			current_floor -= 1
 	else:
 		current_floor = 0
-		print("Wrong Guess")
 	
 	start_new_loop()
 

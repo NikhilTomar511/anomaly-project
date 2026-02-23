@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlqkqcjov6wtb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5sqb2"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_6ci6h"]
+material = SubResource("StandardMaterial3D_5sqb2")
+outer_radius = 0.6
+rings = 32
+ring_segments = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42r11"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_26thn"]
+material = SubResource("StandardMaterial3D_42r11")
+height = 0.01
+
+[node name="safe_light" type="Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_6ci6h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+mesh = SubResource("CylinderMesh_26thn")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="MeshInstance3D"]
+shadow_enabled = true
+omni_range = 0.5

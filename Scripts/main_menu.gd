@@ -1,8 +1,11 @@
 extends Control
 
+@onready var background:Sprite2D = $Sprite2D
 
 func _ready() -> void:
 	AnomalyManager.game_mode = 0
+	if randf() < 0.1:
+		background.texture = load("res://Untitled (25).png")
 
 func _process(delta: float) -> void:
 	pass

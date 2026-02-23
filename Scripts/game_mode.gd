@@ -1,5 +1,6 @@
 extends Control
 
+@onready var background:Sprite2D = $Sprite2D
 
 func _ready() -> void:
 	pass
@@ -22,3 +23,12 @@ func _on_hard_pressed() -> void:
 func _on_insanity_pressed() -> void:
 	AnomalyManager.game_mode = 4
 	get_tree().change_scene_to_file("res://world.tscn")
+
+func _on_insanity_mouse_entered() -> void:
+	background.texture = load("res://Untitled (24).png")
+
+func _on_insanity_mouse_exited() -> void:
+	background.texture = load("res://Untitled (23).png")
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://main_menu.tscn")
